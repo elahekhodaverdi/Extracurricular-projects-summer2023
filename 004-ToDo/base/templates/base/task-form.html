@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <form method="POST" action="" class="task-form form">
+        {% csrf_token %}
+        {% for field in form %}
+            <div>
+                {% if field.label != "Due date" %}
+                    <label for="{{ field.name }}">{{ field.label }}</label>
+                    {{ field }}
+                {% else %}
+                    <input id="dateInput" type="date" name="due_date">
+                {% endif %}
+            </div>
+        {% endfor %}
+        <input type="submit" value="Add">
+    </form>
+    <script src="{% static 'js/taskForm.js' %}" async defer></script>
+    <link rel="stylesheet" href="{% static 'styles/form.css' %}">
+{% endblock %}

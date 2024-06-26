@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="com-task">
+    <p id="title">{{task.title}}</p>
+    <div id="description">
+        <p>{{task}}</p>
+        <p>priority: {{task.priority}}</p>
+        <div id="comments">
+            <p>Comments</p>
+            <div>
+                {% for comment in comments  %}
+                <p>{{comment}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

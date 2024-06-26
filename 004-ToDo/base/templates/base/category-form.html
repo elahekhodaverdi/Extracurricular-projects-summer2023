@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <form method="POST" class="form" action="{% url 'create-category' %}">
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            <label for="{{ field.name }}">{{ field.label }}</label>
+            {{ field }}
+        </div>
+        {% endfor %}
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}

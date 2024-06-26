@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="createTask">
+    <form method="GET" action={% url 'create-task' %}>
+        <input type="submit" value="New Task" />
+    </form>
+</div>
+
+
+<select id="dropdown">
+    <option value="" disabled selected>Sort by</option>
+    {% for field in fields %}
+    <option value="{{field.name}}">{{field.name}}</option>
+    {% endfor %}
+</select>    
+
+<div class= "tasks">
+{% for task in tasks %}
+<div class="task">
+    <div>
+        <form action={% url 'task' task.id %} method="POST">
+            {% csrf_token %}    
+            <button id="circleButton" value={{task.completed}} type="submit"></button>
+        </form>
+        <a href={% url 'task' task.id %}><b>{{task.title}}</b></a>
+        <p>{{task}}</p>
+        <p class="date">{{task.formatted_date}}</p>
+    </div>
+    <div class = "updateDelete" >
+        <form action={% url 'update-task' task.id %} >
+            <button type="submit"><span >&#9998;</span></button>
+        </form>
+        <form action={% url 'delete-task' task.id %} method="POST">
+            {% csrf_token %}    
+            <button type="submit"><span>&times;</span></button>
+        </form>
+    </div>
+</div>
+{% endfor %}
+<script src={% static 'js/taskPage.js' %}></script>
+</div>
+{% endblock %}

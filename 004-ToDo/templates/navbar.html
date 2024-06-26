@@ -1,0 +1,13 @@
+{%load static%}
+<header>
+    <div class="navbar">
+        {% if request.user.is_authenticated %}
+            <a href={% url 'logout'%}><b>Logout  <span id="name">{{request.user.name}}</span></b></a>
+        {% else %}
+            <a href={% url 'login'%}><b>Login</b></a>
+        {% endif %}
+        <a href={% url 'tasks' %}>Inbox</a>
+        <a href={% url 'categories' %}>Categories</a>
+        <a href={% url 'tasks' %}?q=today>Today</a>
+    </div>
+</header>

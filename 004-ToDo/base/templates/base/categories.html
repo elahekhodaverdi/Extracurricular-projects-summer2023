@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="createTask">
+    <form action={% url 'create-category' %} class='createTaskSubmit'>
+        <input type="submit" value="New category" />
+    </form>
+</div>
+<div class="categories">
+    {% for category in categories  %}
+    <div class="category">
+    <a href= {% url 'category' category.id %} >{{ category.name }}</a>
+    <hr>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
