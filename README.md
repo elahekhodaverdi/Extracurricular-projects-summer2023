@@ -4,7 +4,7 @@
 
 ### `001-SignUp`
 
-This directory contains a signup page design implemented using HTML and CSS.
+A design for a sign-up form.
 
 <div align="center" style="display: flex; justify-content: center; align-items: center;" >
     <img src="images/001/001-1.png" alt="SignUp Page" style="height: 300px; flex: 1; object-fit: cover;">
@@ -14,7 +14,7 @@ This directory contains a signup page design implemented using HTML and CSS.
 
 ### `002-ShoppingCart`
 
-In this directory, you'll find a simple shopping cart page design.
+A design for a shopping cart for something like an art gallery, a very simple one. I should mention that all drawings shown on this page are original and were created by me and my friend, so please do not use them personally.
 
 <div align="center" style="display: flex; justify-content: center; align-items: center;">
     <img src="images/002/002-1.png" alt="Shopping Cart Page" style="height: 300px; flex: 1; object-fit: cover;">
@@ -23,7 +23,7 @@ In this directory, you'll find a simple shopping cart page design.
 
 ### `003-Portfolio`
 
-Here lies a portfolio design showcasing various projects and works.
+A design for a portfolio page that contains information about education, skills, experiences, and an "About Me" section. Its focus was on using CSS Grid and Flexbox for a deep understanding of these attributes.
 
 <div align="center" style="display: flex; justify-content: center; align-items: center;">
     <img src="images/003/003-1.png" alt="Portfolio" style="height: 300px; flex: 1; object-fit: cover;">
@@ -39,7 +39,7 @@ Also
 
 ### `004-ToDo`
 
-This directory hosts a Django project for a todo list application.
+A Django project for a to-do list. Its focus is on the back-end side, not the design side, to get familiar with the Django framework. Therefore, not much time is spent on the front end.
 <div align="center"  style="display: flex; justify-content: center; align-items: center;">
     <img src="images/004/004-1.png" alt="Portfolio" style="height: 300px; flex: 1; object-fit: cover;">
 </div>
